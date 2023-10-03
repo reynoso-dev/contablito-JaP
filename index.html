@@ -69,5 +69,21 @@
             <button type="submit">Registrar Movimiento</button>
         </form>
     </div>
+
+function mostrarAlertasBajoStock(umbral) {
+    const alertaEncontrada = false;
+
+    for (const producto of database.productos) {
+        if (producto.cantidad < umbral) {
+            console.log(`${producto.nombre} tiene un bajo stock: ${producto.cantidad} unidades`);
+            alertaEncontrada = true;
+        }
+    }
+
+    if (!alertaEncontrada) {
+        console.log('No hay alertas de bajo stock.');
+    }
+}
+    
 </body>
 </html>
