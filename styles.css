@@ -81,3 +81,25 @@ th {
 input[readonly] {
     background-color: #eee;
 }
+
+/* Estilos para hacer que la página sea responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        padding: 8px 16px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
